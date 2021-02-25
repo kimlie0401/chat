@@ -131,6 +131,7 @@ export const Register = (props) => {
               {loading ? "Loading.." : "Register"}
             </Button>
             <br />
+            <br />
             <small>
               Already have an account? <Link to="/login">Login</Link>
             </small>

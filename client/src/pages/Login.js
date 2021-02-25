@@ -99,6 +99,7 @@ export const Login = (props) => {
               {loading ? "Loading.." : "Login"}
             </Button>
             <br />
+            <br />
             <small>
               Don't have an account? <Link to="/register">Register</Link>
             </small>
