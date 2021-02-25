@@ -69,6 +69,7 @@ export const Login = (props) => {
     <Row className="bg-white py-5 justify-content-center">
       <Col sm={8} md={6} lg={4}>
         <h1 className="text-center">Login</h1>
+        <br />
         <Form onSubmit={submitLoginForm}>
           <Form.Group>
             <Form.Label className={errors.username && "text-danger"}>

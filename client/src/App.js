@@ -13,7 +13,7 @@ function App() {
   return (
     <ApolloProvider>
       <BrowserRouter>
-        <Container className="pt-5">
+        <Container className="p-5">
           <Switch>
             <Route path="/register" component={Register} />
             <Route exact path="/" component={Home} />
