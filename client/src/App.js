@@ -17,7 +17,7 @@ function App() {
     <ApolloProvider>
       <AuthProvider>
         <BrowserRouter>
-          <Container className="p-5">
+          <Container className="pt-5">
             <Switch>
               <DynamicRoute path="/register" component={Register} guest />
               <DynamicRoute exact path="/" component={Home} authenticated />
