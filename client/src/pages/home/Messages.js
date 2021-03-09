@@ -43,14 +43,6 @@ const Messages = () => {
   ] = useLazyQuery(GET_MESSAGES);
 
   const [sendMessage] = useMutation(SEND_MESSAGE, {
-    onCompleted: (data) =>
-      dispatch({
-        type: "ADD_MESSAGE",
-        payload: {
-          username: selectedUser.username,
-          message: data.sendMessage,
-        },
-      }),
     onError: (err) => console.log(err),
   });
 
@@ -103,7 +95,11 @@ const Messages = () => {
       </Fragment>
     ));
   } else if (messages.length === 0) {
-    selectedChatMarkup = <p>You are now connected! Send your first message!</p>;
+    selectedChatMarkup = (
+      <p className="info-text">
+        You are now connected! Send your first message!
+      </p>
+    );
   }
 
   return (
