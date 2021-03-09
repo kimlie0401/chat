@@ -57,10 +57,14 @@ const Home = ({ history }) => {
     <Fragment>
       <Row className="bg-white justify-content-around mb-1">
         <Link to="/login">
-          <Button variant="link">Login</Button>
+          {user ? (
+            <Button variant="link">{user.username}</Button>
+          ) : (
+            <Button variant="link">Login</Button>
+          )}
         </Link>
         <Link to="/register">
-          <Button variant="link">Register</Button>
+          {user ? null : <Button variant="link">Register</Button>}
         </Link>
 
         <Button variant="link" onClick={logout}>
